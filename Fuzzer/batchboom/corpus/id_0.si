@@ -1,0 +1,27 @@
+v-u
+
+_p0:    li t3, 0xFFFFFFF
+                         
+        csrr t1, sepc
+                            
+        addi t0, t1, 0
+                           
+        la t2, _p2
+                               
+        csrw sepc, t2
+                            
+        csrr t1, sepc
+                            
+        csrr t2, stvec
+                           
+        
+                                         
+        csrw mstatus, t3
+                         
+        sret
+                                     
+_p1:    nop
+                                      
+_p2:    nop
+                                      
+                                                  
